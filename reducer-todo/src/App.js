@@ -6,7 +6,7 @@ import './components/TodoComponents/Todo.css';
 
 
 const  App = (props) => {
-  
+  console.log('app',props)
   return (
     <div className = 'app'>
       <h1>Get SHIFT Done</h1>

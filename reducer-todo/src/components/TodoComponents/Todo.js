@@ -2,19 +2,17 @@ import React, { useState, useReducer } from 'react';
 
 import { initialState, todoReducer } from '../../reducers/Reducer'
 
-const Todo = () => {
-  const [newTodoText, setNewTodoText] = useState();
-  
+const Todo = ({todo}) => {
+
   const [state, dispatch] = useReducer(todoReducer, initialState);
   
  
-
+  console.log(state);
 
   return(
-      <div className ={`${state.completed ? 'completed' : ''}`} 
-            onClick={() => dispatch({ type: 'TOGGLE_EDITING' })} >
-          <li>{state.task}</li>
-      </div>
+      
+          <li>{todo.task}</li>
+  
     );
 };
 

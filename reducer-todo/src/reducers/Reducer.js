@@ -5,7 +5,7 @@ export const initialState = {
     task:'Learn about reducers',
     completed: false,
     editing: false,
-    id: Date.now();
+    id: Date.now()
     }]
 }
 
@@ -41,4 +41,4 @@ export const todoReducer = (state, action) => {
             } ;
             default:
                 return state;
-}
+}}
