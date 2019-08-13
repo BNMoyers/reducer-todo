@@ -15,7 +15,11 @@ const  App = (props) => {
     </div>
   );
 
-// toggleTask = id => {
+
+
+// actions = TOGGLE_TASK, ADD_TASK, CLEAR_COMPLETED
+
+//toggleTask = id => {
 //   this.setState({
 // todos: this.state.todos.map(task => {
 //       if (task.id === id) {
