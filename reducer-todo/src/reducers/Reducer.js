@@ -1,9 +1,12 @@
 
 export const initialState = {
-    item: 'Learn about reducers',
+    items: [
+        {
+    task:'Learn about reducers',
     completed: false,
     editing: false,
-    id: 3892987589
+    id: Date.now();
+    }]
 }
 
 // actions = TOGGLE_TASK, ADD_TASK, CLEAR_COMPLETED

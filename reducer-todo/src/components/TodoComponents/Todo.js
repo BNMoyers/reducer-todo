@@ -7,12 +7,13 @@ const Todo = () => {
   
   const [state, dispatch] = useReducer(todoReducer, initialState);
   
-  
+ 
+
 
   return(
-      <div className ={`${props.task.completed ? 'completed' : ''}`} 
-            onClick={() => props.toggleTask(props.task.id)} >
-          <li>{props.task.task}</li>
+      <div className ={`${state.completed ? 'completed' : ''}`} 
+            onClick={() => dispatch({ type: 'TOGGLE_EDITING' })} >
+          <li>{state.task}</li>
       </div>
     );
 };

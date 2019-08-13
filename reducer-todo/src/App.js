@@ -15,45 +15,6 @@ const  App = (props) => {
     </div>
   );
 
-
-
-// actions = TOGGLE_TASK, ADD_TASK, CLEAR_COMPLETED
-
-//toggleTask = id => {
-//   this.setState({
-// todos: this.state.todos.map(task => {
-//       if (task.id === id) {
-//          return {
-//           ...task,
-//           completed: !task.completed
-//          };
-//     } else {
-//         return task;
-//       }
-//     })
-//   });
-// };
-
-// addTask = taskName => {
-//   const newTask = {
-//     task: taskName,
-//     id: Date.now(),
-//     completed: false
-//   }
-//   this.setState({
-//     todos: [...this.state.todos, newTask]
-//   })
-// }
-
-// clearCompleted = () => {
-//   this.setState({
-//     todos: this.state.todos.filter(task => !task.completed)
-//   })
- 
-
-
-  
-   
   
 }
 
