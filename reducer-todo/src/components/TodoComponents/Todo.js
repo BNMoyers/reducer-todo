@@ -1,6 +1,6 @@
 import React, { useState, useReducer } from 'react';
 
-import { initialState, todoReducer } from '../../reducers/Reducer'
+import { initialState, todoReducer } from '../../reducers'
 
 const Todo = ({todo}) => {
 

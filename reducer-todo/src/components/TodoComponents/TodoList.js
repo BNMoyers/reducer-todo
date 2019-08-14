@@ -1,21 +1,14 @@
 import React, { useReducer } from 'react';
 import Todo from './Todo';
-import { todoReducer, initialState} from '../../reducers/Reducer'
+import { todoReducer, initialState} from '../../reducers'
 
 
 
-const TodoList = () => {
-
-    const [state, dispatch] = useReducer(todoReducer, initialState);
+const TodoList = ({ itemsArray }) => {
 
     return(
        <div className='todo-list'>
-           <ul>
-               {state.items.map(todo => {
-               return <Todo todo={todo}/>
-               })}
-           </ul>
-           <button className='clear-finished' >Clear Finished</button>
+         {itemsArray.map(task => <div key={task.item}></div>)}
        </div>
    ); 
 }

@@ -32,9 +32,14 @@ export const todoReducer = (state, action) => {
                 completed: !state.completed
 
                     } ;
-        case 'ADD_TASK':
+        case 'ADD_TODO':
             return{
-                
+                ...state,
+                itemsArray: [...state.itemsArray, {
+                    task: action.payload,
+                    completed: false,
+                    id: Date.now()
+                }]
                             } ;
 
         case 'CLEAR_COMPLETED':
