@@ -1,14 +1,19 @@
-import React, { useReducer } from 'react';
-import Todo from './Todo';
-import { todoReducer, initialState} from '../../reducers'
+import React from 'react';
 
 
 
-const TodoList = ({ itemsArray }) => {
+const TodoList = ({ todoArray, toggleTodo }) => {
 
     return(
        <div className='todo-list'>
-         {itemsArray.map(task => <div key={task.item}></div>)}
+         {todoArray.map(todo => 
+         (<div key={todo.id}
+          onClick={()=> toggleTodo(todo.id)}
+           className={todo.completed ? "completed" : ""}>
+           {todo.task}
+
+           </div>
+           ))}
        </div>
    ); 
 }

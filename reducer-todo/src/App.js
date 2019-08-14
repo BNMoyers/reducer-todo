@@ -11,11 +11,19 @@ const  App = (props) => {
   const addTodo = task => {
     dispatch({ type: 'ADD_TODO', payload: task})
   }
+
+  const toggleTodo = id => {
+    dispatch({ type: 'TOGGLE_TODO', payload: id });
+  }
+
+  const clearCompleted = () => {
+    dispatch({ type: 'CLEAR_COMPLETED'});
+  }
   return (
     <div className = 'app'>
       <h1>Get SHIFT Done</h1>
-      <TodoList itemsArray={state.itemsArray}/>
-      <TodoForm addTodo={addTodo}/>
+      <TodoList todoArray={state.todoArray} toggleTodo={toggleTodo}/>
+      <TodoForm addTodo={addTodo}  clearCompleted={clearCompleted}/>
     </div>
   );
 
