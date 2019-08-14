@@ -1,17 +1,19 @@
 
 export const initialState = {
-    items: [
+    itemsArray: [
         {
     task:'Learn about reducers',
     completed: false,
     editing: false,
     id: Date.now()
-    }]
-}
+    }
+],
+};
 
 // actions = TOGGLE_TASK, ADD_TASK, CLEAR_COMPLETED
 
 export const todoReducer = (state, action) => {
+   
     switch (action.type){
         case 'TOGGLE_EDITING':
             return{
