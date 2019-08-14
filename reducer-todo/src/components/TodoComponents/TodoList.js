@@ -6,14 +6,14 @@ const TodoList = ({ todoArray, toggleTodo }) => {
 
     return(
        <div className='todo-list'>
-         {todoArray.map(todo => 
-         (<div key={todo.id}
-          onClick={()=> toggleTodo(todo.id)}
-           className={todo.completed ? "completed" : ""}>
-           {todo.task}
-
-           </div>
-           ))}
+         <ul>{todoArray.map(todo =>
+         (<li key={todo.id}
+         onClick={()=> toggleTodo(todo.id)}
+         className={todo.completed ? "completed" : ""}>
+         {todo.task}
+         </li>
+        
+         ))}</ul>
        </div>
    ); 
 }
