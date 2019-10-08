@@ -10,12 +10,14 @@ export const initialState =  {
 
 export const reducer = (state, action) => {
     switch(action.type){
-        case 'ADD_TODO':
-            const newTask = {
+        case 'ADD_TASK':
+            return {
+                ...state,
+                todoArray: [...state.todoArray,{
                 task: action.payload,
                 completed: false,
                 id: Date.now()
-
+                }]
             };
          case 'TOGGLE_TODO':
              return {

@@ -8,7 +8,7 @@ function App() {
   const [state, dispatch] = useReducer(reducer, initialState);
   
   const addTask = task => {
-    dispatch({ type: 'ADD_TODO', payload: task})
+    dispatch({ type: 'ADD_TASK', payload: task})
   }
 
   const toggleTask = id => {
