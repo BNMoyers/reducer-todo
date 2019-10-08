@@ -24,7 +24,7 @@ function App() {
     <h1>Welcome to your To-Do App!</h1>
     <div className='todo-box'>
       <TodoForm addTask={addTask}/>
-      <TodoList tasks={state.tasks}
+      <TodoList tasks={state.todoArray}
                       toggleTask = {toggleTask}
                       clearCompleted = {clearCompleted} />
     </div>
